@@ -1,0 +1,294 @@
+:root {
+    --green: #54E6AF;
+    --black: #121725;
+    --grey: #2C344B;
+    --grey-light: #C2CBE5;
+    --white: #fff;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Chivo', sans-serif;
+    position: relative;
+}
+
+h1, h2, p {
+    margin: 0;
+    text-align: center;
+    font-family: 'Chivo', sans-serif;
+}
+
+.container {
+    padding: 3.875rem 1.5rem 0 1.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.backdrop {
+    background: url("../assets/mobile/image-host.jpg") no-repeat;
+    background-size: auto 100%;
+    background-color: rgba(18, 23, 37, 0.8);
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+button {
+    font-weight: 700;
+}
+
+input {
+    border: none;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+input, button {
+    font-family: 'Chivo', sans-serif;
+    border-radius: 1.75rem;
+    height: 2.875rem;
+    padding: 0.625rem 2rem;
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+input::placeholder {
+    color: var(--white);
+    font-size: 0.875rem;
+    opacity: 0.5;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+h1 > span:first-child {
+    color: var(--green);
+}
+
+h1 > span:last-child {
+    color: var(--white);
+}
+
+p {
+    color: var(--grey-light);
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: var(--green);
+    color: var(--black);
+    line-height: 1.75rem;
+    box-shadow: 0 25px 20px -20px rgba(84, 230, 175, 0.497913);
+}
+
+.actions {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.icons {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+}
+
+.icons > img {
+    height: auto;
+}
+
+.icons > img:first-child {
+    width: 56px;
+}
+
+.icons > img:nth-child(2) {
+    width: 45px;
+}
+
+.icons > img:nth-child(3) {
+    width: 73px;
+}
+
+.icons > img:nth-child(4) {
+    width: 77px;
+}
+
+.hero {
+    height: 56px;
+    margin-bottom: 57px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero > img {
+    height: 100%;
+}
+
+.pattern {
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: var(--black);
+    }
+
+    .container {
+        padding: 50px 5.875rem 0 39px;
+    }
+
+    .hero {
+        justify-content: flex-start;
+        margin-bottom: 152px;
+    }
+
+    h1, p {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 31px;
+    }
+
+    p, .actions {
+        width: 427px;
+    }
+
+    .icons {
+        order: 1;
+        padding-right: 99px;
+        height: 29px;
+    }
+
+    .icons > img:first-child {
+        width: 96px;
+    }
+
+    .icons > img:nth-child(2) {
+        width: 78px;
+    }
+
+    .icons > img:nth-child(3) {
+        width: 125px;
+    }
+
+    .icons > img:nth-child(4) {
+        width: 129px;
+    }
+
+    .actions {
+        position: relative;
+    }
+
+    input {
+        height: 56px;
+    }
+
+    button {
+        position: absolute;
+        right: 5px;
+        height: 46px;
+        width: 162px;
+        white-space: nowrap;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .pattern {
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+        width: 232px;
+        height: 104px;
+        display: block;
+    }
+
+    .content {
+        background-color: var(--black);
+        padding: 93px 30px 0 0;
+    }
+
+    .backdrop {
+        background: url("../assets/tablet/image-host.jpg") no-repeat;
+        width: 491px;
+        height: 767px;
+        right: 0;
+        top: 0;
+        background-color: rgba(18, 23, 37, 0.2);
+        background-size: 100% auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container {
+        position: relative;
+        /*width: 1275px;*/
+        height: 640px;
+        padding-left: 165px;
+    }
+
+    .pattern {
+        right: 0 !important;
+        bottom: 78px !important;
+        left: unset;
+    }
+
+    .backdrop {
+        width: 888px;
+        height: 640px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("../assets/desktop/image-host.jpg") no-repeat;
+    }
+
+    .hero {
+        position: absolute;
+        top: -28px;
+    }
+
+    .content {
+        position: absolute;
+        width: 723px;
+        height: 509px;
+        bottom: 0;
+    }
+}
