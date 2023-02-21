@@ -325,5 +325,6 @@ p {
         bottom: -52px;
         width: 232px;
         height: 104px;
+        z-index: 99;
     }
 }
