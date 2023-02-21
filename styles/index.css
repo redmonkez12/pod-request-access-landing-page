@@ -291,4 +291,8 @@ p {
         height: 509px;
         bottom: 0;
     }
+
+    .icons {
+        margin-top: 64px;
+    }
 }
