@@ -154,7 +154,7 @@ p {
     flex-direction: column;
 }
 
-.backdrop-desktop {
+.backdrop-desktop, .pattern-desktop {
     display: none;
 }
 
@@ -304,6 +304,10 @@ p {
         margin-top: 40px;
     }
 
+    .pattern {
+        display: none;
+    }
+
     .backdrop-desktop {
         width: 888px;
         height: 640px;
@@ -312,5 +316,14 @@ p {
         background: url("../assets/desktop/image-host.jpg") no-repeat;
         display: block;
         position: absolute;
+    }
+
+    .pattern-desktop {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -52px;
+        width: 232px;
+        height: 104px;
     }
 }
